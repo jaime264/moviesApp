@@ -6,8 +6,8 @@ class UserRepository {
     this.model = model;
   }
 
-  create(object) {
-    return this.model.create(object);
+  async create(object) {
+    return await this.model.create(object);
   }
 }
 

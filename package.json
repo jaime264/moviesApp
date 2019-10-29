@@ -5,8 +5,9 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
+    "express-promise-router": "^3.0.3",
     "mongod": "^2.0.0",
-    "mongodb": "^3.2.7",
+    "mongodb": "^3.3.3",
     "mongoose": "^5.7.7",
     "nodemon": "^1.19.4"
   },
@@ -20,6 +21,7 @@
   },
   "scripts": {
     "start": "nodemon -w src -x \"babel-node src --presets @babel/env\"",
-    "dev": "nodemon -w src -x \"babel-node src --presets @babel/env\""
+    "dev": "nodemon -w src -x \"babel-node src --presets @babel/env\"",
+    "test": "mocha --require @babel/register 'src/**/**spec.js'"
   }
 }

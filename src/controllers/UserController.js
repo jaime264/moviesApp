@@ -1,14 +1,14 @@
 import UserRepository from '../models/repositories/UserRepository';
 
-function createUser(req, res) {
+async function createUser(req, res) {
   const user = req.body;
 
-  UserRepository.create(user)
+  await UserRepository.create(user)
     .then((newUser) => {
-      res.json(newUser);
+      return res.json(newUser);
     }).catch((errors) => {
-      res.status(500).json({
-        errors,
+      return res.status(500).json({
+        errors
       });
     });
 }

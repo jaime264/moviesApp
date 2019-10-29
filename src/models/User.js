@@ -9,7 +9,7 @@ const schema = new Schema({
   password: {
     type: String
   }
-});
+}, {collection:'Usuario'} );
 
 const User = mongoose.model('User', schema);
 export default User;
