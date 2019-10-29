@@ -1,0 +1,17 @@
+--Instalando Express
+npm i express dotenv
+
+--Instalando dependencias para el ambiente desarrollo
+npm i -D nodemon eslint eslint-config-prettier eslint-plugin-prettier
+
+--formatea el codigo y sube todo al repositoria al compilar
+npx mrm lint-staged
+
+--commit
+git commit --no-verify -m "Message"
+
+--Eliminar server abierto
+lsof -i tcp:3000
+kill -9 5805
+
+C6YHGI*RE96E
